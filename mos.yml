@@ -1,0 +1,13 @@
+author: mongoose-os
+name: arduino-adafruit-bme280
+description: Arduino Adafruit BME280 library
+type: lib
+# arch: PLATFORM
+version: 1.0
+skeleton_version: 2017-05-18
+sources:
+  - src
+libs:
+  - origin: https://github.com/mongoose-os-libs/arduino-compat
+  - origin: https://github.com/mongoose-os-libs/arduino-wire
+  - origin: https://github.com/mongoose-os-libs/arduino-spi
