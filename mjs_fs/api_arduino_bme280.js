@@ -1,5 +1,5 @@
 // Arduino Adafruit_BME280 library API. Source C API is defined at:
-// [mgos_arduino_bme280.h](https://github.com/cesanta/mongoose-os/blob/master/mos_libs/arduino-adafruit-bme280/src/mgos_arduino_bme280.h)
+// [mgos_arduino_bme280.h](https://github.com/mongoose-os-libs/arduino-adafruit-bme280/blob/master/src/mgos_arduino_bme280.h)
 
 load('api_math.js');
 
