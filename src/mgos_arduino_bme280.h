@@ -5,11 +5,13 @@
  * Arduino Adafruit_BME280 library API wrapper
  */
 
+#ifndef CS_MOS_LIBS_ARDUINO_ADAFRUIT_BME280_SRC_MGOS_ARDUINO_BME280_H_
+#define CS_MOS_LIBS_ARDUINO_ADAFRUIT_BME280_SRC_MGOS_ARDUINO_BME280_H_
+
 #include "Adafruit_BME280.h"
 
 #ifdef __cplusplus
-extern "C"
-{
+extern "C" {
 #endif
 
 #define MGOS_BME280_RES_FAIL -10000
@@ -56,6 +58,10 @@ int mgos_bme280_read_altitude(Adafruit_BME280 *bme, int seaLevel);
 int mgos_bme280_sea_level_for_altitude(Adafruit_BME280 *bme,
                                        int altitude,
                                        int pressure);
+
 #ifdef __cplusplus
 }
-#endif  /* __cplusplus */
+#endif
+
+
+#endif /* CS_MOS_LIBS_ARDUINO_ADAFRUIT_BME280_SRC_MGOS_ARDUINO_BME280_H_ */
