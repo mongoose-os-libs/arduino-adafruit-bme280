@@ -1,1 +1,1 @@
-# Arduino Adafruit BME280 library for Mongoose OS
+# Arduino Adafruit BME280 and BMP280 library for Mongoose OS

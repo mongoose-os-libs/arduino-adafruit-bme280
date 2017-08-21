@@ -63,8 +63,8 @@ bool Adafruit_BME280::begin(uint8_t           addr)
     }
 
     // check if sensor, i.e. the chip ID is correct
-    if (read8(BME280_REGISTER_CHIPID) != 0x60)
-        return false;
+    uint8_t chipId = read8(BME280_REGISTER_CHIPID);
+    if (chipId != CHIP_ID_BME280 && chipId != CHIP_ID_BMP280) return false;
 
     // reset the device using soft-reset
     // this makes sure the IIR is off, etc.

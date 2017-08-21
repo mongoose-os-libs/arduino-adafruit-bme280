@@ -1,5 +1,5 @@
 author: mongoose-os
-description: Arduino Adafruit BME280 library
+description: Arduino Adafruit BME280 and BMP280 library
 type: lib
 version: 1.0
 
