@@ -8,7 +8,11 @@
 #ifndef CS_MOS_LIBS_ARDUINO_ADAFRUIT_BME280_SRC_MGOS_ARDUINO_BME280_H_
 #define CS_MOS_LIBS_ARDUINO_ADAFRUIT_BME280_SRC_MGOS_ARDUINO_BME280_H_
 
+#ifdef __cplusplus
 #include "Adafruit_BME280.h"
+#else
+typedef struct Adafruit_BME280Tag Adafruit_BME280;
+#endif
 
 #ifdef __cplusplus
 extern "C" {
