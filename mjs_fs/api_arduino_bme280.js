@@ -27,7 +27,7 @@ let Adafruit_BME280 = {
     // Initialize Adafruit_BME280 library.
     // Return value: handle opaque pointer.
     obj.bme = Adafruit_BME280._c_i2c();
-    obj.i2cad = i2caddr;
+    Adafruit_BME280._begin(obj.bme, i2caddr);
     return obj;
   },
 
@@ -39,7 +39,7 @@ let Adafruit_BME280 = {
     // Initialize Adafruit_BME280 library.
     // Return value: handle opaque pointer.
     obj.bme = Adafruit_BME280._c_spi(cspin);
-    obj.i2cad = undefined;
+    Adafruit_BME280._begin(obj.bme, undefined);
     return obj;
   },
 
@@ -52,18 +52,11 @@ let Adafruit_BME280 = {
     // Initialize Adafruit_BME280 library.
     // Return value: handle opaque pointer.
     obj.bme = Adafruit_BME280._c_spi_full(cspin, mosipin, misopin, sckpin);
-    obj.i2cad = undefined;
+    Adafruit_BME280._begin(obj.bme, undefined);
     return obj;
   },
 
   _proto: {
-    // ## **`myBME.begin()`**
-    // Initialize the sensor with the parameters given to `create...` function.
-    // Return value: 1 if succeed, 0 otherwise.
-    begin: function() {
-      return Adafruit_BME280._begin(this.bme, this.i2cad);
-    },
-
     // ## **`myBME.close()`**
     // Close Adafruit_BME280 instance; no methods can be called on this instance
     // after that.
