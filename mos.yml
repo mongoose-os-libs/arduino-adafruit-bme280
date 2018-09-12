@@ -17,5 +17,6 @@ tags:
   - c
   - js
   - hw
+  - docs:arduino:BME280
 
 manifest_version: 2017-09-29
